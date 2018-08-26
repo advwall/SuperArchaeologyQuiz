@@ -23,7 +23,7 @@
             android:textSize="16sp" />
 
         <RadioGroup
-            android:id="@+id/radioQuestion1"
+            android:id="@+id/questionOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="24dp">
@@ -47,7 +47,7 @@
                 android:text="@string/q1r3" />
 
             <RadioButton
-                android:id="@+id/question1AT"
+                android:id="@+id/question1Relics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q1r4" />
