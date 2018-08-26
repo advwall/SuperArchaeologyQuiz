@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Super Archaeology Quiz</string>
+    <string name="q1">Archaeology is the study of what?</string>
+    <string name="q1r1">Dinosaurs</string>
+    <string name="q1r2">Spiders</string>
+    <string name="q1r3">Material Culture</string>
+    <string name="q1r4">Relics</string>
+    <string name="q2">Select fields of archaeology from the options below:</string>
+    <string name="q2c1">Classical Archaeology</string>
+    <string name="q2c2">CRM</string>
+    <string name="q2c3">Garbology</string>
+    <string name="q2c4">Paleoethnobotany</string>
+    <string name="q3">Archaeologists who primarily do field work often find what?</string>
+    <string name="q3r1">Gold</string>
+    <string name="q3r2">Ancient Native Spiritual Relics</string>
+    <string name="q3r3">Dinosaur Bones</string>
+    <string name="q3r4">Artifacts</string>
+    <string name="q4">Name a well known fictional archaeologist.</string>
+    <string name="yourAnswerHere">Type your answer here!</string>
+    <string name="q5">What are some tools archaeologists in the United States often use? Select from the options below:</string>
+    <string name="q5c1">A Trowel</string>
+    <string name="q5c2">A Screen</string>
+    <string name="q5c3">GPS</string>
+    <string name="q5c4">Screwdriver</string>
+    <string name="q6">Where do archaeologists work?</string>
+    <string name="q6c1">Cultural Resource Management Firms</string>
+    <string name="q6c2">Your local State Historic Preservation Office</string>
+    <string name="q6c3">Hospitals</string>
+    <string name="q6c4">Egypt</string>
+    <string name="q7">Archaeologists often work with NAGPRA. What does this acronym stand for?</string>
+    <string name="q8">Archaeologists often do work for engineering firms.</string>
+    <string name="tf1">True</string>
+    <string name="tf2">False</string>
+    <string name="next">How did I score?</string>
+    <string name="desc">Find out your score here</string>
+</resources>

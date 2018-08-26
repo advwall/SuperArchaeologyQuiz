@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Super Jeu D\'Archéologie</string>
+    <string name="q1">L\'archéologie est l\'étude de quoi?</string>
+    <string name="q1r1">Des Dinosaures</string>
+    <string name="q1r2">Des Araignées</string>
+    <string name="q1r3">Culture matérielle</string>
+    <string name="q1r4">Reliques</string>
+    <string name="q2">Sélectionnez les champs d\'archéologie parmi les options ci-dessous:</string>
+    <string name="q2c1">Archéologie Classique</string>
+    <string name="q2c2">Gestion des ressources culturelles</string>
+    <string name="q2c3">Garbologie</string>
+    <string name="q2c4">Paléoéthnobotanique</string>
+    <string name="q3">Les archéologues qui font principalement du travail de terrain trouvent souvent quoi?</string>
+    <string name="q3r1">Or</string>
+    <string name="q3r2">Reliques spirituelles indigènes anciennes</string>
+    <string name="q3r3">Os de dinosaure</string>
+    <string name="q3r4">Artefacts</string>
+    <string name="q4">Nommez un archéologue de fiction bien connu.</string>
+    <string name="yourAnswerHere">Tapez votre réponse ici!</string>
+    <string name="q5">Quels sont les outils que les archéologues aux États-Unis utilisent souvent? Sélectionnez parmi les options ci-dessous:</string>
+    <string name="q5c1">Une truelle</string>
+    <string name="q5c2">Un écran</string>
+    <string name="q5c3">Les gps</string>
+    <string name="q5c4">Le Tournevis</string>
+    <string name="q6">Où travaillent les archéologues?</string>
+    <string name="q6c1">Entreprises de gestion des ressources culturelles</string>
+    <string name="q6c2">Votre bureau local de préservation de l\'état</string>
+    <string name="q6c3">Les hôpitaux</string>
+    <string name="q6c4">Egypte</string>
+    <string name="q7">Les archéologues travaillent souvent avec NAGPRA. Que signifie cet acronyme?</string>
+    <string name="q8">Les archéologues travaillent souvent pour des sociétés d\'ingénierie.</string>
+    <string name="tf1">Vrai</string>
+    <string name="tf2">Faux</string>
+    <string name="next">Comment ai-je marqué?</string>
+    <string name="desc">Découvrez votre score ici</string>
+</resources>
