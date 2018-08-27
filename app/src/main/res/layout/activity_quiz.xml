@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".Quiz">
+    tools:context="com.example.android.archquiz02.Quiz"
+    >
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -22,28 +23,29 @@
             app:contentScrim="?attr/colorPrimaryDark"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:expandedTitleTextAppearance="@color/colorPrimary"
-            app:toolbarId="@+id/toolbar">
+            app:toolbarId="@+id/toolbar"
+            android:fitsSystemWindows="true"
+            >
 
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/app_bar_height"
-                android:scaleType="centerCrop"
                 android:fitsSystemWindows="true"
-                app:layout_collapseMode="parallax"
+                android:scaleType="centerCrop"
                 android:src="@drawable/troweli"
-                />
+                app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
-                app:layout_collapseMode="pin"/>
+                app:layout_collapseMode="pin"
+                android:text="@string/app_name"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
-
 
     <include layout="@layout/content_quiz" />
 

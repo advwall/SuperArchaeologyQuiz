@@ -4,10 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Quiz"
-    tools:showIn="@layout/activity_quiz">
+    tools:context="com.example.android.archquiz02.Quiz"
+    android:background="@color/colorAccent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -309,25 +309,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="32dp">
+            android:layout_marginBottom="64dp">
 
-            <Button
-                android:id="@+id/buttonScore"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="16dp"
-                android:onClick="buttonScore"
-                android:text="@string/next"
-                android:contentDescription="@string/desc"/>
+        <Button
+            android:id="@+id/buttonScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:text="@string/next"
+            android:contentDescription="@string/desc"/>
 
         </LinearLayout>
 
-        <RadioButton
-            android:id="@+id/question1Relics"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/q1r4" />
     </LinearLayout>
 
 
