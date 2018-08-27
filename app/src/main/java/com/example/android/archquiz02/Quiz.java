@@ -69,12 +69,10 @@ public class Quiz extends AppCompatActivity {
 
     private void questionFour() {
         String Q4_ANSWER = getQuestionFourUser();
-        switch (Q4_ANSWER) {
-            case "Indiana Jones":
-            case "Lara Croft":
-                break;
-
+        if (Q4_ANSWER.trim().equalsIgnoreCase("Indiana Jones")) {
+            score += 1;
         }
+
 
     }
 
