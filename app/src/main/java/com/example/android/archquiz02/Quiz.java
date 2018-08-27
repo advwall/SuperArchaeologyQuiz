@@ -1,6 +1,5 @@
 package com.example.android.archquiz02;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,10 +7,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
-import java.util.ArrayList;
 
 public class Quiz extends AppCompatActivity {
 
@@ -22,8 +20,10 @@ public class Quiz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_quiz);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        buttonScore = (Button) findViewById(R.id.buttonScore);
+        buttonScore = findViewById(R.id.buttonScore);
         buttonScore.setOnClickListener(scoreButtonOnClickListener);
 
     }
@@ -37,10 +37,10 @@ public class Quiz extends AppCompatActivity {
     }
 
     private void questionTwo() {
-        CheckBox cb1 = (CheckBox) findViewById(R.id.classicarch);
-        CheckBox cb2 = (CheckBox) findViewById(R.id.crm);
-        CheckBox cb3 = (CheckBox) findViewById(R.id.garbology);
-        CheckBox cb4 = (CheckBox) findViewById(R.id.paleo);
+        CheckBox cb1 = findViewById(R.id.classicarch);
+        CheckBox cb2 = findViewById(R.id.crm);
+        CheckBox cb3 = findViewById(R.id.garbology);
+        CheckBox cb4 = findViewById(R.id.paleo);
         boolean questionTwoClassicalChecked = cb1.isChecked();
         boolean questionTwoCRMChecked = cb2.isChecked();
         boolean questionTwoGarbologyChecked = cb3.isChecked();
@@ -61,7 +61,7 @@ public class Quiz extends AppCompatActivity {
     }
 
     private String getQuestionFourUser() {
-        EditText userFamousPeople = (EditText) findViewById(R.id.yourAnswerHere);
+        EditText userFamousPeople = findViewById(R.id.yourAnswerHere);
         String Q4_ANSWER = userFamousPeople.getText().toString();
         return Q4_ANSWER;
 
@@ -77,10 +77,10 @@ public class Quiz extends AppCompatActivity {
     }
 
     private void questionFive() {
-        CheckBox cb5 = (CheckBox) findViewById(R.id.question5Trowel);
-        CheckBox cb6 = (CheckBox) findViewById(R.id.question5Screen);
-        CheckBox cb7 = (CheckBox) findViewById(R.id.question5Gps);
-        CheckBox cb8 = (CheckBox) findViewById(R.id.question5Driver);
+        CheckBox cb5 = findViewById(R.id.question5Trowel);
+        CheckBox cb6 = findViewById(R.id.question5Screen);
+        CheckBox cb7 = findViewById(R.id.question5Gps);
+        CheckBox cb8 = findViewById(R.id.question5Driver);
         boolean questionFiveTrowelChecked = cb5.isChecked();
         boolean questionFiveScreenChecked = cb6.isChecked();
         boolean questionFiveGPSChecked = cb7.isChecked();
@@ -108,7 +108,7 @@ public class Quiz extends AppCompatActivity {
     }
 
     private String getQuestionSevenUser() {
-        EditText question7Nagpra = (EditText) findViewById(R.id.question7Nagpra);
+        EditText question7Nagpra = findViewById(R.id.question7Nagpra);
         String Q7_ANSWER = question7Nagpra.getText().toString();
         return Q7_ANSWER;
     }

@@ -322,6 +322,12 @@
                 android:contentDescription="@string/desc"/>
 
         </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/question1Relics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q1r4" />
     </LinearLayout>
 
 

@@ -3,14 +3,18 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#7F4B32</item>
+        <item name="colorPrimary">#fff8d9</item>
         <item name="colorPrimaryDark">#2B1A11</item>
-        <item name="colorAccent">#fff8d9</item>
+        <item name="colorAccent">#7F4B32</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="PrimaryActionButton" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
