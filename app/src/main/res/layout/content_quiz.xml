@@ -4,10 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.android.archquiz02.Quiz"
-    android:background="@color/colorAccent">
+    android:background="@color/colorAccent"
+    app:theme="@style/AppTheme"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,14 +71,14 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/classicarch"
+                android:id="@+id/question2Classicarch"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/q2c1" />
 
             <CheckBox
-                android:id="@+id/crm"
+                android:id="@+id/question2CRM"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -91,14 +93,14 @@
             android:paddingBottom="24dp">
 
             <CheckBox
-                android:id="@+id/garbology"
+                android:id="@+id/question2garbology"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/q2c3" />
 
             <CheckBox
-                android:id="@+id/paleo"
+                android:id="@+id/question2paleo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -116,8 +118,8 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="24dp"
-            android:id="@+id/radioQuestion3"/>
+            android:id="@+id/radioQuestion3"
+            />
 
             <RadioButton
                 android:id="@+id/question3Gold"
@@ -148,12 +150,13 @@
             android:id="@+id/question4Indiana"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingTop="16dp"
             android:paddingBottom="16dp"
             android:text="@string/q4"
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/yourAnswerHere"
+            android:id="@+id/question4FamousPeople"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/yourAnswerHere"

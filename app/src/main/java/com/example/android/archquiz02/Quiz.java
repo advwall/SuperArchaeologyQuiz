@@ -1,23 +1,33 @@
 package com.example.android.archquiz02;
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
-import android.support.v7.widget.Toolbar;
 
 
 public class Quiz extends AppCompatActivity {
 
+    RadioButton rb1, rb2, rb3;
+    CheckBox cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8, cb9, cb10, cb11, cb12;
+    EditText question4FamousPeople, question7Nagpra;
+
     Button buttonScore;
     int score = 0;
+
+
+
+    boolean appBarExpanded = true;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,21 +37,60 @@ public class Quiz extends AppCompatActivity {
         buttonScore = findViewById(R.id.buttonScore);
         buttonScore.setOnClickListener(scoreButtonOnClickListener);
 
+        rb1 = findViewById(R.id.question1MC);
+        rb2 = findViewById(R.id.question3Artifacts);
+        rb3 = findViewById(R.id.question8TF1);
+
+        cb1 = findViewById(R.id.question2Classicarch);
+        cb2 = findViewById(R.id.question2CRM);
+        cb3 = findViewById(R.id.question2garbology);
+        cb4 = findViewById(R.id.question2paleo);
+        cb5 = findViewById(R.id.question5Trowel);
+        cb6 = findViewById(R.id.question5Screen);
+        cb7 = findViewById(R.id.question5Gps);
+        cb8 = findViewById(R.id.question5Driver);
+        cb9 = findViewById(R.id.question6crmFirm);
+        cb10 = findViewById(R.id.question6Shpo);
+        cb11 = findViewById(R.id.question6Hospital);
+        cb12 = findViewById(R.id.question6Egypt);
+
+        question4FamousPeople = findViewById(R.id.question4FamousPeople);
+        question7Nagpra = findViewById(R.id.question7Nagpra);
+
+        CollapsingToolbarLayout collapsingToolbar;
+        AppBarLayout appBarLayout;
+        appBarLayout = findViewById(R.id.app_bar);
+
+        collapsingToolbar = findViewById(R.id.collapsing_toolbar);
+        collapsingToolbar.setTitle(getString(R.string.app_name));
+
+        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+
+                //  Vertical offset == 0 indicates appBar is fully expanded.
+                if (Math.abs(verticalOffset) > 200) {
+                    appBarExpanded = false;
+                    invalidateOptionsMenu();
+                } else {
+                    appBarExpanded = true;
+                    invalidateOptionsMenu();
+                }
+            }
+        });
+
     }
 
+
     private void questionOne() {
-        RadioButton rb1 = findViewById(R.id.question1MC);
         boolean Q1_ANSWERChecked = rb1.isChecked();
         if (Q1_ANSWERChecked) {
             score += 1;
+
         }
     }
 
     private void questionTwo() {
-        CheckBox cb1 = findViewById(R.id.classicarch);
-        CheckBox cb2 = findViewById(R.id.crm);
-        CheckBox cb3 = findViewById(R.id.garbology);
-        CheckBox cb4 = findViewById(R.id.paleo);
         boolean questionTwoClassicalChecked = cb1.isChecked();
         boolean questionTwoCRMChecked = cb2.isChecked();
         boolean questionTwoGarbologyChecked = cb3.isChecked();
@@ -54,7 +103,6 @@ public class Quiz extends AppCompatActivity {
     }
 
     private void questionThree() {
-        RadioButton rb2 = findViewById(R.id.question3Artifacts);
         boolean Q3_ANSWERChecked = rb2.isChecked();
         if (Q3_ANSWERChecked) {
             score += 1;
@@ -62,8 +110,7 @@ public class Quiz extends AppCompatActivity {
     }
 
     private String getQuestionFourUser() {
-        EditText userFamousPeople = findViewById(R.id.yourAnswerHere);
-        String Q4_ANSWER = userFamousPeople.getText().toString();
+        String Q4_ANSWER = question4FamousPeople.getText().toString();
         return Q4_ANSWER;
 
     }
@@ -78,10 +125,6 @@ public class Quiz extends AppCompatActivity {
     }
 
     private void questionFive() {
-        CheckBox cb5 = findViewById(R.id.question5Trowel);
-        CheckBox cb6 = findViewById(R.id.question5Screen);
-        CheckBox cb7 = findViewById(R.id.question5Gps);
-        CheckBox cb8 = findViewById(R.id.question5Driver);
         boolean questionFiveTrowelChecked = cb5.isChecked();
         boolean questionFiveScreenChecked = cb6.isChecked();
         boolean questionFiveGPSChecked = cb7.isChecked();
@@ -94,10 +137,6 @@ public class Quiz extends AppCompatActivity {
     }
 
     private void questionSix() {
-        CheckBox cb9 = findViewById(R.id.question6crmFirm);
-        CheckBox cb10 = findViewById(R.id.question6Shpo);
-        CheckBox cb11 = findViewById(R.id.question6Hospital);
-        CheckBox cb12 = findViewById(R.id.question6Egypt);
         boolean questionSixCRMFirmChecked = cb9.isChecked();
         boolean questionSixSHPOChecked = cb10.isChecked();
         boolean questionSixHospChecked = cb11.isChecked();
@@ -109,7 +148,6 @@ public class Quiz extends AppCompatActivity {
     }
 
     private String getQuestionSevenUser() {
-        EditText question7Nagpra = findViewById(R.id.question7Nagpra);
         String Q7_ANSWER = question7Nagpra.getText().toString();
         return Q7_ANSWER;
     }
@@ -122,7 +160,6 @@ public class Quiz extends AppCompatActivity {
     }
 
     private void questionEight() {
-        RadioButton rb3 = findViewById(R.id.question8TF1);
         boolean Q8_ANSWERChecked = rb3.isChecked();
         if (Q8_ANSWERChecked) {
             score += 1;
@@ -140,8 +177,25 @@ public class Quiz extends AppCompatActivity {
         questionEight();
     }
 
-    private void resetAnswers(){
+    public void resetAnswers(){
         score = 0;
+        rb1.setChecked(false);
+        rb2.setChecked(false);
+        cb1.setChecked(false);
+        cb2.setChecked(false);
+        cb3.setChecked(false);
+        cb4.setChecked(false);
+        cb5.setChecked(false);
+        cb6.setChecked(false);
+        cb7.setChecked(false);
+        cb8.setChecked(false);
+        cb9.setChecked(false);
+        cb10.setChecked(false);
+        cb11.setChecked(false);
+        cb12.setChecked(false);
+        question4FamousPeople.setText("");
+        question7Nagpra.setText("");
+
     }
 
     final View.OnClickListener scoreButtonOnClickListener = new View.OnClickListener() {
@@ -152,5 +206,7 @@ public class Quiz extends AppCompatActivity {
 
         }
     };
+
+
 
 }

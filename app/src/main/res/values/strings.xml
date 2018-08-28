@@ -7,7 +7,7 @@
     <string name="q1r4">Relics</string>
     <string name="q2">Select fields of archaeology from the options below:</string>
     <string name="q2c1">Classical Archaeology</string>
-    <string name="q2c2">CRM</string>
+    <string name="q2c2">Cultural Resource Management (CRM)</string>
     <string name="q2c3">Garbology</string>
     <string name="q2c4">Paleoethnobotany</string>
     <string name="q3">Archaeologists who primarily do field work often find what?</string>
@@ -15,7 +15,7 @@
     <string name="q3r2">Ancient Native Spiritual Relics</string>
     <string name="q3r3">Dinosaur Bones</string>
     <string name="q3r4">Artifacts</string>
-    <string name="q4">Name a well known fictional archaeologist.</string>
+    <string name="q4">Name a well known fictional archaeologist with a fedora.</string>
     <string name="yourAnswerHere">Type your answer here!</string>
     <string name="q5">What are some tools archaeologists in the United States often use? Select from the options below:</string>
     <string name="q5c1">A Trowel</string>
